@@ -1,0 +1,9 @@
+D:\AssignmentTraining\BlogSimple\BlogSimple.Model\bin\Debug\netcoreapp2.0\BlogSimple.Model.deps.json
+D:\AssignmentTraining\BlogSimple\BlogSimple.Model\bin\Debug\netcoreapp2.0\BlogSimple.Model.dll
+D:\AssignmentTraining\BlogSimple\BlogSimple.Model\bin\Debug\netcoreapp2.0\BlogSimple.Model.pdb
+D:\AssignmentTraining\BlogSimple\BlogSimple.Model\obj\Debug\netcoreapp2.0\BlogSimple.Model.csprojResolveAssemblyReference.cache
+D:\AssignmentTraining\BlogSimple\BlogSimple.Model\obj\Debug\netcoreapp2.0\BlogSimple.Model.csproj.CoreCompileInputs.cache
+D:\AssignmentTraining\BlogSimple\BlogSimple.Model\obj\Debug\netcoreapp2.0\BlogSimple.Model.AssemblyInfoInputs.cache
+D:\AssignmentTraining\BlogSimple\BlogSimple.Model\obj\Debug\netcoreapp2.0\BlogSimple.Model.AssemblyInfo.cs
+D:\AssignmentTraining\BlogSimple\BlogSimple.Model\obj\Debug\netcoreapp2.0\BlogSimple.Model.dll
+D:\AssignmentTraining\BlogSimple\BlogSimple.Model\obj\Debug\netcoreapp2.0\BlogSimple.Model.pdb
