@@ -14,7 +14,7 @@ namespace BlogSimple.Controllers
         {
             _authorService = authorService;
             _blogSimpleConfig = blogSimpleConfig;
-        }
+        }    
         public IActionResult Index()
         {
             return View();
