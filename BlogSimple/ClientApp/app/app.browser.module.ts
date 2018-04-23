@@ -6,7 +6,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TestService } from "./services/test.service";
 import { AuthGuard } from '../app/components/auth-guard.service'
 import { AuthService } from '../app/components/auth.service'
-import {SelectivePreloadingStrategy } from '../app/components/selective-preloading-strategy'
+import { SelectivePreloadingStrategy } from '../app/components/selective-preloading-strategy'
+import { httpInterceptorProviders } from '../app/components/httpinterceptors/index'
+
 @NgModule({
     bootstrap: [ AppComponent ],
     imports: [
@@ -19,7 +21,8 @@ import {SelectivePreloadingStrategy } from '../app/components/selective-preloadi
       TestService,
       AuthGuard,
       AuthService,
-      SelectivePreloadingStrategy
+      SelectivePreloadingStrategy,
+      httpInterceptorProviders
     ]
 })
 export class AppModule {

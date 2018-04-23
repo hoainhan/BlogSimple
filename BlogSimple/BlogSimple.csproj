@@ -22,6 +22,8 @@
 
   <ItemGroup>
     <None Remove="ClientApp\app\components\admin\admin.module.ts" />
+    <None Remove="ClientApp\app\components\httpinterceptors\auth-interceptor.ts" />
+    <None Remove="ClientApp\app\components\httpinterceptors\index.ts" />
   </ItemGroup>
 
   <ItemGroup>
@@ -32,6 +34,8 @@
 
   <ItemGroup>
     <TypeScriptCompile Include="ClientApp\app\components\admin\admin.module.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\httpinterceptors\auth-interceptor.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\httpinterceptors\index.ts" />
     <TypeScriptCompile Include="ClientApp\app\services\test.service.ts" />
   </ItemGroup>
 

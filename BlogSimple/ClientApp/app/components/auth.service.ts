@@ -17,4 +17,8 @@ export class AuthService {
   public logout(): void {
     this.isLoggedIn = false;
   }
+  public getAuthorizationToken(): string {
+    alert(123456);
+    return "some auth token";
+  }
 }
