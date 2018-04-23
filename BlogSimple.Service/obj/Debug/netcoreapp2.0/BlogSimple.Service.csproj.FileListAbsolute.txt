@@ -1,0 +1,13 @@
+D:\AssignmentTraining\BlogSimple\BlogSimple.Service\bin\Debug\netcoreapp2.0\BlogSimple.Service.deps.json
+D:\AssignmentTraining\BlogSimple\BlogSimple.Service\bin\Debug\netcoreapp2.0\BlogSimple.Service.dll
+D:\AssignmentTraining\BlogSimple\BlogSimple.Service\bin\Debug\netcoreapp2.0\BlogSimple.Service.pdb
+D:\AssignmentTraining\BlogSimple\BlogSimple.Service\bin\Debug\netcoreapp2.0\BlogSimple.Model.dll
+D:\AssignmentTraining\BlogSimple\BlogSimple.Service\bin\Debug\netcoreapp2.0\BlogSimple.Repository.dll
+D:\AssignmentTraining\BlogSimple\BlogSimple.Service\bin\Debug\netcoreapp2.0\BlogSimple.Repository.pdb
+D:\AssignmentTraining\BlogSimple\BlogSimple.Service\bin\Debug\netcoreapp2.0\BlogSimple.Model.pdb
+D:\AssignmentTraining\BlogSimple\BlogSimple.Service\obj\Debug\netcoreapp2.0\BlogSimple.Service.csprojResolveAssemblyReference.cache
+D:\AssignmentTraining\BlogSimple\BlogSimple.Service\obj\Debug\netcoreapp2.0\BlogSimple.Service.csproj.CoreCompileInputs.cache
+D:\AssignmentTraining\BlogSimple\BlogSimple.Service\obj\Debug\netcoreapp2.0\BlogSimple.Service.AssemblyInfoInputs.cache
+D:\AssignmentTraining\BlogSimple\BlogSimple.Service\obj\Debug\netcoreapp2.0\BlogSimple.Service.AssemblyInfo.cs
+D:\AssignmentTraining\BlogSimple\BlogSimple.Service\obj\Debug\netcoreapp2.0\BlogSimple.Service.dll
+D:\AssignmentTraining\BlogSimple\BlogSimple.Service\obj\Debug\netcoreapp2.0\BlogSimple.Service.pdb
