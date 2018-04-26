@@ -17,11 +17,13 @@ namespace BlogSimple.Model
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            AuthorMap.Map(modelBuilder.Entity<Author>());
-            BookMap.Map(modelBuilder.Entity<Book>());
+            ConfigMaps.MapBlogPost(modelBuilder.Entity<BlogPost>());
+            ConfigMaps.MapCategory(modelBuilder.Entity<Category>());
+            ConfigMaps.MapComment(modelBuilder.Entity<Comment>());
         }
-
-        private DbSet<Book> Books { get; set; }
-        private DbSet<Author> Authors { get; set; }
+        private DbSet<BlogPost> BlogPosts { get; set; }
+        private DbSet<Comment> Comments { get; set; }
+        private DbSet<Category> Categories { get; set; }
+        
     }
 }

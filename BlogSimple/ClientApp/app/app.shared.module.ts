@@ -11,11 +11,12 @@ import { HomeComponent } from './components/home/home.component';
 import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { CounterComponent } from './components/counter/counter.component';
 import { SelectivePreloadingStrategy } from "./components/selective-preloading-strategy";
+import { CategoryComponent } from "./components/category/category.component"
 
 
 const appRoutes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
+  { path: '', redirectTo: 'category', pathMatch: 'full' },
+  { path: 'category', component: CategoryComponent },
   { path: 'counter', component: CounterComponent },
   { path: 'fetch-data', component: FetchDataComponent },
   {
@@ -23,7 +24,7 @@ const appRoutes: Routes = [
     loadChildren: "../app/components/admin/admin.module#AdminModule",
     data: { preload: true }
   },
-  { path: '**', redirectTo: 'home' }
+  { path: '**', redirectTo: 'category' }
 ]
 
 @NgModule({
@@ -32,7 +33,8 @@ const appRoutes: Routes = [
         NavMenuComponent,
         CounterComponent,
         FetchDataComponent,
-        HomeComponent
+      HomeComponent,
+      CategoryComponent
     ],
     imports: [
       CommonModule,

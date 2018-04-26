@@ -8,9 +8,9 @@ namespace BlogSimple.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IAuthorService _authorService;
+        private readonly IBlogPostService _authorService;
         private readonly BlogSimpleConfig _blogSimpleConfig;
-        public HomeController(IAuthorService authorService, BlogSimpleConfig blogSimpleConfig)
+        public HomeController(IBlogPostService authorService, BlogSimpleConfig blogSimpleConfig)
         {
             _authorService = authorService;
             _blogSimpleConfig = blogSimpleConfig;
@@ -22,8 +22,6 @@ namespace BlogSimple.Controllers
 
         public IActionResult TestPage()
         {
-          
-            _authorService.Create(new Author{Email = "n",FirstName = "test", LastName = "a"});
             return View();
         }
         public IActionResult Error()

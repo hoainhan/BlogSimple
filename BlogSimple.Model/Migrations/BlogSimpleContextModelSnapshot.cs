@@ -20,48 +20,95 @@ namespace BlogSimple.Model.Migrations
                 .HasAnnotation("ProductVersion", "2.0.2-rtm-10011")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("BlogSimple.Model.Domain.Author", b =>
+            modelBuilder.Entity("BlogSimple.Model.Domain.BlogPost", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Email");
+                    b.Property<Guid?>("CategoryId");
 
-                    b.Property<string>("FirstName")
-                        .IsRequired();
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasMaxLength(5000);
 
-                    b.Property<string>("LastName")
-                        .IsRequired();
+                    b.Property<string>("CreatedBy")
+                        .HasMaxLength(256);
+
+                    b.Property<DateTime>("CreatedDate");
+
+                    b.Property<string>("ShortDescription");
+
+                    b.Property<byte[]>("ThumbnailImage");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasMaxLength(256);
+
+                    b.Property<DateTime>("UpdatedDate");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Authors");
+                    b.HasIndex("CategoryId");
+
+                    b.ToTable("BlogPosts");
                 });
 
-            modelBuilder.Entity("BlogSimple.Model.Domain.Book", b =>
+            modelBuilder.Entity("BlogSimple.Model.Domain.Category", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int>("AuthorId");
-
-                    b.Property<string>("Email");
+                    b.Property<string>("Description");
 
                     b.Property<string>("Name")
-                        .IsRequired();
+                        .IsRequired()
+                        .HasMaxLength(200);
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AuthorId");
-
-                    b.ToTable("Books");
+                    b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("BlogSimple.Model.Domain.Book", b =>
+            modelBuilder.Entity("BlogSimple.Model.Domain.Comment", b =>
                 {
-                    b.HasOne("BlogSimple.Model.Domain.Author", "Author")
-                        .WithMany("Books")
-                        .HasForeignKey("AuthorId")
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<Guid?>("BlogPostId")
+                        .IsRequired();
+
+                    b.Property<string>("CommentDescription")
+                        .IsRequired()
+                        .HasMaxLength(5000);
+
+                    b.Property<string>("CreatedBy")
+                        .HasMaxLength(256);
+
+                    b.Property<DateTime>("CreatedDate");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasMaxLength(256);
+
+                    b.Property<DateTime>("UpdatedDate");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BlogPostId");
+
+                    b.ToTable("Comments");
+                });
+
+            modelBuilder.Entity("BlogSimple.Model.Domain.BlogPost", b =>
+                {
+                    b.HasOne("BlogSimple.Model.Domain.Category", "Category")
+                        .WithMany("BlogPosts")
+                        .HasForeignKey("CategoryId");
+                });
+
+            modelBuilder.Entity("BlogSimple.Model.Domain.Comment", b =>
+                {
+                    b.HasOne("BlogSimple.Model.Domain.BlogPost", "BlogPost")
+                        .WithMany("Comments")
+                        .HasForeignKey("BlogPostId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
