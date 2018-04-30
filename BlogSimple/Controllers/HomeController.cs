@@ -6,7 +6,7 @@ using System.Diagnostics;
 
 namespace BlogSimple.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         private readonly IBlogPostService _authorService;
         private readonly BlogSimpleConfig _blogSimpleConfig;

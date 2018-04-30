@@ -18,7 +18,7 @@ export class AuthService {
     this.isLoggedIn = false;
   }
   public getAuthorizationToken(): string {
-    alert(123456);
+    alert("interceptor get author");
     return "some auth token";
   }
 }

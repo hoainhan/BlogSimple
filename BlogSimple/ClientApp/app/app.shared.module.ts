@@ -7,40 +7,35 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './components/app/app.component';
 import { NavMenuComponent } from './components/navmenu/navmenu.component';
-import { HomeComponent } from './components/home/home.component';
-import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
-import { CounterComponent } from './components/counter/counter.component';
 import { SelectivePreloadingStrategy } from "./components/selective-preloading-strategy";
-import { CategoryComponent } from "./components/category/category.component"
-
+import { AuthGuard } from './components/auth-guard.service';
 
 const appRoutes: Routes = [
-  { path: '', redirectTo: 'category', pathMatch: 'full' },
-  { path: 'category', component: CategoryComponent },
-  { path: 'counter', component: CounterComponent },
-  { path: 'fetch-data', component: FetchDataComponent },
-  {
-    path: 'test-child', 
-    loadChildren: "../app/components/admin/admin.module#AdminModule",
-    data: { preload: true }
-  },
-  { path: '**', redirectTo: 'category' }
+    { path: '', redirectTo: 'managercategory', pathMatch: 'full' },
+    {
+        path: 'managercategory',
+        loadChildren: "../app/components/managercategory/managercategory.module#CategoryModule",
+        data: { preload: true },
+        canLoad: [AuthGuard]
+    },
+    {
+        path: 'managerblogpost',
+        loadChildren: '../app/components/managerblogpost/blogpost.module#BlogPostModule',
+        data: {preload:true}
+    },
+  { path: '**', redirectTo: 'managercategory' }
 ]
 
 @NgModule({
     declarations: [
         AppComponent,
-        NavMenuComponent,
-        CounterComponent,
-        FetchDataComponent,
-      HomeComponent,
-      CategoryComponent
+        NavMenuComponent
     ],
     imports: [
       CommonModule,
         HttpModule,
-      FormsModule,
-      HttpClientModule,
+        FormsModule,
+        HttpClientModule,
       RouterModule.forRoot(
         appRoutes,
         {

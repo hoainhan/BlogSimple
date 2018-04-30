@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using BlogSimple.Model.Domain;
 
 namespace BlogSimple.Controllers
 {
@@ -13,6 +14,11 @@ namespace BlogSimple.Controllers
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
+        [HttpPost("[action]")]
+        public List<string> GetListExample([FromBody] Category category)
+        {
+            return new List<string> { "1", "2", "3" };
+        }
 
         [HttpGet("[action]")]
         public IEnumerable<WeatherForecast> WeatherForecasts()
@@ -40,5 +46,6 @@ namespace BlogSimple.Controllers
                 }
             }
         }
+
     }
 }

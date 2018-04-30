@@ -8,19 +8,24 @@ import { AuthGuard } from '../app/components/auth-guard.service'
 import { AuthService } from '../app/components/auth.service'
 import { SelectivePreloadingStrategy } from '../app/components/selective-preloading-strategy'
 import { httpInterceptorProviders } from '../app/components/httpinterceptors/index'
+import { ApiService } from './services/api.service'
+import { CategoryService } from './services/category.service'
+
 
 @NgModule({
     bootstrap: [ AppComponent ],
     imports: [
         BrowserModule,
       AppModuleShared,
-      BrowserAnimationsModule
+        BrowserAnimationsModule
     ],
     providers: [
         { provide: 'BASE_URL', useFactory: getBaseUrl },
       TestService,
       AuthGuard,
-      AuthService,
+        AuthService,
+        ApiService,
+        CategoryService,
       SelectivePreloadingStrategy,
       httpInterceptorProviders
     ]

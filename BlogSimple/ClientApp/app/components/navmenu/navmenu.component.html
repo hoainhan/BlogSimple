@@ -13,18 +13,13 @@
         <div class='navbar-collapse collapse'>
             <ul class='nav navbar-nav'>
                 <li [routerLinkActive]="['link-active']">
-                    <a [routerLink]="['/home']">
+                    <a [routerLink]="['/managercategory']">
                         <span class='glyphicon glyphicon-home'></span> Category
                     </a>
                 </li>
                 <li [routerLinkActive]="['link-active']">
-                    <a [routerLink]="['/counter']">
-                        <span class='glyphicon glyphicon-education'></span> BlogPost
-                    </a>
-                </li>
-                <li [routerLinkActive]="['link-active']">
-                    <a [routerLink]="['/fetch-data']">
-                        <span class='glyphicon glyphicon-th-list'></span> Comment
+                    <a [routerLink]="['/managerblogpost']">
+                        <span class='glyphicon glyphicon-th-list'></span> BlogPost
                     </a>
                 </li>
             </ul>

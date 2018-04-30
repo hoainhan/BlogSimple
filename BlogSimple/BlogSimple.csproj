@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,10 +22,22 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="ClientApp\app\components\admin\admin.module.ts" />
-    <None Remove="ClientApp\app\components\category\category.component.ts" />
+    <None Remove="ClientApp\app\components\managerblogpost\blogpost.module.ts" />
+    <None Remove="ClientApp\app\components\managerblogpost\create\createblogpost.component.ts" />
+    <None Remove="ClientApp\app\components\managerblogpost\home\blogpost.component.ts" />
+    <None Remove="ClientApp\app\components\managerblogpost\list\listblogpost.component.ts" />
+    <None Remove="ClientApp\app\components\managercategory\category.component.ts" />
     <None Remove="ClientApp\app\components\httpinterceptors\auth-interceptor.ts" />
     <None Remove="ClientApp\app\components\httpinterceptors\index.ts" />
+    <None Remove="ClientApp\app\components\managercategory\home\category.component.ts" />
+    <None Remove="ClientApp\app\components\managercategory\managercategory-router.module.ts" />
+    <None Remove="ClientApp\app\components\managercategory\managercategory.module.ts" />
+    <None Remove="ClientApp\app\directives\control-messages.component.ts" />
+    <None Remove="ClientApp\app\directives\validation.service.ts" />
+    <None Remove="ClientApp\app\services\api.service.ts" />
+    <None Remove="ClientApp\app\services\blogpost.service.ts" />
+    <None Remove="ClientApp\app\services\category.service.ts" />
+    <None Remove="ClientApp\app\services\config.service.ts" />
   </ItemGroup>
 
   <ItemGroup>
@@ -34,11 +47,29 @@
   </ItemGroup>
 
   <ItemGroup>
-    <TypeScriptCompile Include="ClientApp\app\components\admin\admin.module.ts" />
-    <TypeScriptCompile Include="ClientApp\app\components\category\category.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\managerblogpost\blogpost-router.module.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\managerblogpost\blogpost.module.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\managerblogpost\create\createblogpost.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\managerblogpost\home\blogpost.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\managerblogpost\list\listblogpost.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\managercategory\create\createcategory.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\managercategory\home\category.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\managercategory\list\listcategory.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\httpinterceptors\auth-interceptor.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\httpinterceptors\index.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\managercategory\managercategory-router.module.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\managercategory\managercategory.module.ts" />
+    <TypeScriptCompile Include="ClientApp\app\directives\control-messages.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\services\api.service.ts" />
+    <TypeScriptCompile Include="ClientApp\app\services\config.service.ts" />
+    <TypeScriptCompile Include="ClientApp\app\services\validation.service.ts" />
+    <TypeScriptCompile Include="ClientApp\app\services\blogpost.service.ts" />
+    <TypeScriptCompile Include="ClientApp\app\services\category.service.ts" />
     <TypeScriptCompile Include="ClientApp\app\services\test.service.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ClientApp\app\components\managercomment\list\" />
   </ItemGroup>
 
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">

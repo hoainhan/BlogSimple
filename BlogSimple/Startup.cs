@@ -65,7 +65,7 @@ namespace BlogSimple
 
                 routes.MapSpaFallbackRoute(
                     name: "spa-fallback",
-                    defaults: new { controller = "Home", action = "TestPage" });
+                    defaults: new { controller = "Admin", action = "Index" });
             });
         }
     }
